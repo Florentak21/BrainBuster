@@ -1,0 +1,170 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F8F9FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Conteneur du quiz */
+.quiz-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Titre */
+h1 {
+    font-size: 2.5rem;
+    color: #333333;
+    margin-bottom: 1.5rem;
+}
+
+h1 i {
+    margin: 0 10px;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+h1 i:first-of-type {
+    color: #FFD700;
+}
+
+h1 i:last-of-type {
+    color: #6C63FF;
+}
+
+/* Conteneur des questions */
+#question-container {
+    margin-bottom: 1.5rem;
+}
+
+#question-text {
+    font-size: 1.5rem;
+    color: #333333;
+    margin-bottom: 1rem;
+}
+
+/* Conteneur des réponses */
+#answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Boutons de réponse */
+#answers-container button {
+    background: linear-gradient(135deg, #6C63FF, #8E85FF);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#answers-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(108, 99, 255, 0.3);
+}
+
+#answers-container button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Conteneur des boutons "Suivant", "Rejouer" et score */
+.actions-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+/* Boutons "Suivant" et "Rejouer" */
+#next-button, #replay-button {
+    background: linear-gradient(135deg, #FFD700, #FFC107);
+    color: #333333;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#next-button:hover, #replay-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 214, 0, 0.3);
+}
+
+/* Score */
+#score {
+    background: linear-gradient(135deg, #6C63FF, #8E85FF);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: default;
+}
+
+/* Feedback */
+#feedback {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* Animation pour le feedback */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#feedback {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .quiz-container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #question-text {
+        font-size: 1.2rem;
+    }
+
+    #answers-container button {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .actions-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #next-button, #replay-button, #score {
+        width: 100%;
+    }
+}
