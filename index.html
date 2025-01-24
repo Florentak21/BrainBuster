@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainBuster - Funny Quiz</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="./app.js" type="module" defer></script>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>BrainBuster <i class="fas fa-brain"></i> <i class="fas fa-bolt"></i></h1>
+        <div id="question-container">
+            <p id="question-text"></p>
+            <div id="answers-container"></div>
+        </div>
+        <div class="actions-container">
+            <button id="next-button">Suivant</button>
+            <div id="score">Score : 0</div>
+            <button id="replay-button" style="display: none;">Rejouer</button>
+        </div>
+        <p id="feedback"></p>
+    </div>
+</body>
+</html>
